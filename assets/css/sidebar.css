@@ -1,0 +1,131 @@
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.sidebar a,
+.sidebar a:hover,
+.sidebar a:focus {
+    text-decoration: none;
+    transition: all 0.3s;
+}
+  
+.sidebar .navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+ 
+.sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #212122;
+    color: #fff;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Roboto', Arial, Helvetica, Verdana, sans-serif;
+}
+  
+.sidebar a,
+.sidebar a:hover,
+.sidebar a:focus {
+    color: inherit;
+}
+  
+.sidebar.active {
+    margin-left: -250px;
+}
+
+.sidebar ul.components {
+    padding: 10px 0;
+    margin: 0;
+}
+.sidebar ul.components li ul {
+    padding: 10px 0;
+    background: #2B2B2B;
+}
+  
+.sidebar ul li a {
+    padding: 10px;
+    font-size: 0.9em;
+    display: block;
+    color: #adadad;
+}
+  
+.sidebar ul li a i {
+    background-color: #27272A;
+    margin-right: 10px;
+    font-size: 12px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+  
+.sidebar ul li.active > a,
+.sidebar a[aria-expanded="true"] {
+    color: #fff;
+}
+  
+.sidebar a[data-bs-toggle="collapse"] {
+    position: relative;
+}
+  
+.sidebar a[aria-expanded="false"]::before,
+.sidebar a[aria-expanded="true"]::before {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-family: "Font Awesome 5 Free";
+    font-size: 0.6em;
+    font-weight: bold;
+    color: #d8d8d8;
+    content: '\f078';
+}
+  
+.sidebar a[aria-expanded="true"]::before {
+    content: '\f077';
+}
+  
+.sidebar ul ul a {
+    font-size: 0.8em !important;
+    padding-left: 30px !important;
+    background: #2B2B2B;
+    font-weight: normal;
+    padding: 10px 0;
+}
+  
+.sidebar ul ul a:before {
+    content: "\f111";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    font-style: normal;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-right: 10px;
+    font-size: 8px;
+}
+ 
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media (max-width: 768px) {
+    .sidebar {
+        margin-left: -250px;
+    }
+    .sidebar.active {
+        margin-left: 0;
+    }
+    .sidebarCollapse span {
+        display: none;
+    }
+}

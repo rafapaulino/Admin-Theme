@@ -1,0 +1,50 @@
+
+.title-breadcrumb {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    font-family: 'Roboto', Arial, Helvetica, Verdana, sans-serif;
+    position: relative;
+}
+
+.title-breadcrumb h1 {
+    font-size: 1em;
+    margin: 0 15px 0 0;
+    padding: 0 15px 0 0;
+    line-height: 1.2em;
+    border-right: 1px solid #dee2e6;
+    text-transform: uppercase;
+}
+
+.title-breadcrumb .breadcrumb {
+    margin-bottom: 0;
+    font-size: 0.9em;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: '\f054';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    padding: 0 1em 0 0.5em;
+    font-size: 1em;
+    color: #a1a5b7;
+}
+.breadcrumb-item a {
+    color: #a1a5b7;
+    text-decoration: none;
+}
+.breadcrumb-item a:hover {
+    transition: color .2s ease, background-color .2s ease;
+    color: #009ef7;
+}
+.breadcrumb-item.active {
+    color: #181c32;
+}
+
+.loading-icon {
+    position: absolute;
+    z-index: 1;
+    right: 20px;
+    top: 20px;
+    color: #009ef7;
+}
