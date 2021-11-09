@@ -1,0 +1,24 @@
+
+.form-control, .btn, .form-select {
+    border-radius: 0;
+}
+
+.btn {
+    font-family: 'Roboto', Arial, Helvetica, Verdana, sans-serif;
+}
+
+label.error {
+    color: #cc0505;
+    padding: 5px 0 0 0;
+    display: block;
+    clear: both;
+    width: 100%;
+}
+.form-control.error, .form-select.error {
+    border-color: #cc0505;
+}
+
+.form-control.error:focus, .form-select.error:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(255,0,0,0.20);
+}
