@@ -1,0 +1,31 @@
+{
+  "name": "admin-theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafapaulino/Admin-Theme.git"
+  },
+  "keywords": [
+    "admin",
+    "theme"
+  ],
+  "author": "Rafael Paulino <rafaclasses@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rafapaulino/Admin-Theme/issues"
+  },
+  "homepage": "https://github.com/rafapaulino/Admin-Theme#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "cleave.js": "^1.6.0",
+    "jquery": "^3.6.0",
+    "jquery-maskmoney": "^3.0.2",
+    "jquery-validation": "^1.19.3",
+    "tinymce": "^5.10.1"
+  }
+}
