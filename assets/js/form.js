@@ -158,6 +158,27 @@
             });
         };
 
+        $public.uploadInit = function() {
+
+            if ($private.elementExists('single-upload')) {
+                let singleUpload = new Dropzone('.single-upload', { 
+                    url: "/file/post",
+                    method: "post",
+                    paramName: "file",
+                    maxFiles: 1
+                });
+            }
+
+            if ($private.elementExists('multiple-upload')) {
+                let multipleUpload = new Dropzone('.multiple-upload', { 
+                    url: "/file/post",
+                    method: "post",
+                    uploadMultiple: true,
+                    paramName: "file",
+                });
+            }
+        };
+
         return $public;
     })();
 
@@ -171,5 +192,6 @@
     formApp.cnpjMask();
     formApp.moneyMask();
     formApp.editorInit();
+    formApp.uploadInit();
 
 })(window, document, jQuery);
