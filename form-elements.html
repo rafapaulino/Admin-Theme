@@ -15,6 +15,8 @@
 
     <link rel="stylesheet" href="node_modules/dropzone/dist/basic.css">
     <link rel="stylesheet" href="node_modules/dropzone/dist/dropzone.css">
+    <link rel="stylesheet" href="node_modules/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="node_modules/litepicker/dist/css/litepicker.css">
     <link rel="stylesheet" href="assets/css/app.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/sidebar.css">
@@ -344,6 +346,63 @@
                                 </div>
                             </div>
                             <!-- /card -->
+
+                            <!-- card -->
+                            <div class="card mt-2">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        Date and datetime
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p>Date and datetime picker</p>
+
+                                    <div class="row mb-3">
+                                        <div class="col-md-12">
+                                            <label for="html-datepicker" class="form-label">Datepicker native</label>
+                                            <input type="date" class="form-control" name="html-datepicker" id="html-datepicker">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-12">
+                                            <label for="html-timepicker" class="form-label">Timepicker native</label>
+                                            <input type="time" class="form-control" name="html-timepicker" id="html-timepicker">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-12">
+                                            <label for="datepicker" class="form-label">Datepicker</label>
+                                            <input type="text" class="form-control datepicker" name="datepicker" id="datepicker">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-12">
+                                            <label for="datetimepicker" class="form-label">Datetimepicker</label>
+                                            <input type="text" class="form-control datetimepicker" name="datetimepicker" id="datetimepicker">
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <div class="col-md-12">
+                                            <label for="datepicker-ptbr" class="form-label">Datepicker PT-BR</label>
+                                            <input type="text" class="form-control datepicker-ptbr" name="datepicker-ptbr" id="datepicker-ptbr">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-12">
+                                            <label for="datetimepicker-ptbr" class="form-label">Datetimepicker PT-BR</label>
+                                            <input type="text" class="form-control datetimepicker-ptbr" name="datetimepicker-ptbr" id="datetimepicker-ptbr">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-12">
+                                            <label for="daterangepicker" class="form-label">Date Range Picker</label>
+                                            <input type="text" class="form-control daterangepicker" name="daterangepicker" id="daterangepicker">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /card -->
                         </div>
                         <!-- /col -->
 
@@ -369,8 +428,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js" integrity="sha512-Rdk63VC+1UYzGSgd3u2iadi0joUrcwX0IWp2rTh6KXFoAmgOjRS99Vynz1lJPT8dLjvo6JZOqpAHJyfCEZ5KoA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src='node_modules/tinymce/tinymce.min.js'></script>
 <script src='node_modules/dropzone/dist/dropzone-min.js'></script>
+<script src='node_modules/flatpickr/dist/flatpickr.min.js'></script>
+<script src='node_modules/litepicker/dist/js/main.js'></script>
 
+<script src="assets/js/app.js"></script>
 <script src="assets/js/sidebar.js"></script>
 <script src="assets/js/form.js?time=7000"></script>
+<script src="assets/js/datetime.js?time=77880"></script>
 </body>
 </html>

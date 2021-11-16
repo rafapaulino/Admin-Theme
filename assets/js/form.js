@@ -22,7 +22,7 @@
 
         $public.dateMask = function() {
            
-            if ($private.elementExists('date-mask')) {
+            if (window.app.elementExists('date-mask')) {
                 let datemask = new Cleave('.date-mask', {
                     date: true,
                     delimiter: '-',
@@ -30,7 +30,7 @@
                 });
             }
 
-            if ($private.elementExists('date-mask-ptbr')) {
+            if (window.app.elementExists('date-mask-ptbr')) {
                 let datemask_ptbr = new Cleave('.date-mask-ptbr', {
                     date: true,
                     delimiter: '/',
@@ -38,7 +38,7 @@
                 });
             }
 
-            if ($private.elementExists('time-mask')) {
+            if (window.app.elementExists('time-mask')) {
                 let timemask = new Cleave('.time-mask', {
                     time: true,
                     timePattern: ['h', 'm', 's']
@@ -48,7 +48,7 @@
 
         $public.phoneMask = function() {
             
-            if ($private.elementExists('phone-mask-ptbr')) {
+            if (window.app.elementExists('phone-mask-ptbr')) {
                 let phone_ptbr = new Cleave('.phone-mask-ptbr', {
                     phone: true,
                     phoneRegionCode: 'BR'
@@ -58,7 +58,7 @@
 
         $public.creditCardMask = function() {
 
-            if ($private.elementExists('credit-card-mask')) {
+            if (window.app.elementExists('credit-card-mask')) {
                 let cleave = new Cleave('.credit-card-mask', {
                     creditCard: true,
                     onCreditCardTypeChanged: function (type) {
@@ -70,7 +70,7 @@
         };
 
         $public.cpfMask = function() {
-            if ($private.elementExists('cpf-mask')) {
+            if (window.app.elementExists('cpf-mask')) {
                 let cpfs = document.getElementsByClassName('cpf-mask');
 
                 Array.from(cpfs).forEach(function(cpf) {
@@ -100,7 +100,7 @@
 
 
         $public.cnpjMask = function() {
-            if ($private.elementExists('cnpj-mask')) {
+            if (window.app.elementExists('cnpj-mask')) {
                 let cnpjs = document.getElementsByClassName('cnpj-mask');
 
                 Array.from(cnpjs).forEach(function(cpf) {
@@ -135,16 +135,6 @@
            $('.money-mask-real').maskMoney({prefix:'R$ ', allowNegative: true, thousands:'.', decimal:',', affixesStay: false});
            $('.money-mask').maskMoney();
         };
-        
-
-        $private.elementExists = function(className) {
-            let myElement = document.getElementsByClassName(className);
-            
-            if (myElement.length > 0)
-            return true;
-            else 
-            return false;
-        };
 
         $public.editorInit = function() {
             tinymce.init({
@@ -160,7 +150,7 @@
 
         $public.uploadInit = function() {
 
-            if ($private.elementExists('single-upload')) {
+            if (window.app.elementExists('single-upload')) {
                 let singleUpload = new Dropzone('.single-upload', { 
                     url: "/file/post",
                     method: "post",
@@ -169,7 +159,7 @@
                 });
             }
 
-            if ($private.elementExists('multiple-upload')) {
+            if (window.app.elementExists('multiple-upload')) {
                 let multipleUpload = new Dropzone('.multiple-upload', { 
                     url: "/file/post",
                     method: "post",
