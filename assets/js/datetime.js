@@ -38,18 +38,11 @@
                 for (let loop = 0; loop < daterange.length; loop++) {
                     let item = daterange.item(loop)
                    
-                    new Litepicker({
+                    let litepicker = new Litepicker({
                         element: item,
                         singleMode: false
                     });
                 }
-
-
-
-                flatpickr('.datetimepicker-ptbr', {
-                    enableTime: true,
-                    dateFormat: "d/m/Y H:i",
-                });
             }
         };
 
