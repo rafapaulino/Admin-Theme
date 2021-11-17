@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/rafapaulino/Admin-Theme#readme",
   "dependencies": {
+    "@yaireo/tagify": "^4.9.0",
     "bootstrap": "^5.1.3",
     "cleave.js": "^1.6.0",
     "datatables.net": "^1.11.3",

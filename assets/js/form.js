@@ -169,6 +169,15 @@
             }
         };
 
+        $public.tagInputInit = function() {
+            if (window.app.elementExists('tag-input')) {
+                let elements = document.querySelectorAll('input.tag-input');
+                Array.from(elements).forEach(function(input) {
+                    let tagify = new Tagify(input);
+                });
+            }
+        };
+
         return $public;
     })();
 
@@ -183,5 +192,6 @@
     formApp.moneyMask();
     formApp.editorInit();
     formApp.uploadInit();
+    formApp.tagInputInit();
 
 })(window, document, jQuery);
