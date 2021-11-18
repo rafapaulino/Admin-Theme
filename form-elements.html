@@ -18,7 +18,9 @@
     <link rel="stylesheet" href="node_modules/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="node_modules/litepicker/dist/css/litepicker.css">
     <link rel="stylesheet" href="node_modules/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
-    <link rel="stylesheet" href="node_modules/@yaireo/tagify/dist/tagify.css">    
+    <link rel="stylesheet" href="node_modules/@yaireo/tagify/dist/tagify.css"> 
+    <link rel="stylesheet" href="node_modules/select2/dist/css/select2.min.css"> 
+    <link rel="stylesheet" href="node_modules/select2-bootstrap-5-theme/dist/select2-bootstrap-5-theme.min.css">   
     <link rel="stylesheet" href="assets/css/app.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/sidebar.css">
@@ -201,6 +203,22 @@
                                             <label for="select" class="form-label">Select</label>
                                             <select class="form-select" id="select" aria-label="Default select example">
                                                 <option selected>Open this select menu</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="select-custom" class="form-label">Select custom combo</label>
+                                            <select class="form-select select-combo" id="select-custom" aria-label="Default select example">
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="select-multiple" class="form-label">Select multiple</label>
+                                            <select class="form-select select-multiple" id="select-multiple" aria-label="Default select example">
                                                 <option value="1">One</option>
                                                 <option value="2">Two</option>
                                                 <option value="3">Three</option>
@@ -447,9 +465,10 @@
 <script src="node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="node_modules/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
 <script src="node_modules/@yaireo/tagify/dist/tagify.js"></script>
+<script src="node_modules/select2/dist/js/select2.full.min.js"></script>
 <script src="assets/js/app.js"></script>
 <script src="assets/js/sidebar.js"></script>
-<script src="assets/js/form.js?time=867567000"></script>
+<script src="assets/js/form.js?time=10"></script>
 <script src="assets/js/datetime.js?time=77880"></script>
 </body>
 </html>

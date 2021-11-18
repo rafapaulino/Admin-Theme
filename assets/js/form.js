@@ -178,6 +178,13 @@
             }
         };
 
+        $public.selectCombo = function() {
+            $('.select-combo').select2();
+            $('.select-multiple').select2({
+                multiple: true
+            });
+        };
+
         return $public;
     })();
 
@@ -193,5 +200,6 @@
     formApp.editorInit();
     formApp.uploadInit();
     formApp.tagInputInit();
+    formApp.selectCombo();
 
 })(window, document, jQuery);
