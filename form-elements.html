@@ -142,16 +142,15 @@
             
             <!-- body -->
             <div class="body">
-
                 <div class="container">
-                    <div class="row">
+
+                    <div class="row mb-4">
                         <div class="col">
-                            
                             <!-- card -->
                             <div class="card">
                                 <div class="card-header">
                                     <div class="card-title">
-                                    Form Elements
+                                        Form Elements
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -166,41 +165,146 @@
                                             <label for="password" class="form-label">Password</label>
                                             <input type="password" class="form-control" id="password">
                                         </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                            Default checkbox
-                                            </label>
+                                        <div class="mb-3">
+                                            <label for="disabled" class="form-label">Disabled input</label>
+                                            <input type="text" id="disabled" class="form-control" placeholder="Disabled input" disabled>
                                         </div>
-                                        <div class="form-check mb-3">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                            <label class="form-check-label" for="flexCheckChecked">
-                                            Checked checkbox
-                                            </label>
+                                        <div class="mb-3">
+                                            <label for="select" class="form-label">Select</label>
+                                            <select class="form-select" id="select" aria-label="Default select example">
+                                                <option selected>Open this select menu</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
                                         </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                            <label class="form-check-label" for="flexRadioDefault1">
-                                            Default radio
-                                            </label>
+                                        <div class="mb-3">
+                                            <label for="customRange1" class="form-label">Example range</label>
+                                            <input type="range" class="form-range" id="customRange1">
                                         </div>
-                                        <div class="form-check mb-3">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                            <label class="form-check-label" for="flexRadioDefault2">
-                                            Default checked radio
-                                            </label>
-                                        </div>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                                            <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
-                                          </div>
-                                          <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                                            <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
-                                        </div>
-                                        <div class="mb-3 mt-3">
-                                            <p class="mb-2"><strong>Custom Checkbox</strong></p>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- /card -->
+                        </div>
+                        <!-- /col -->
+                    </div>
+                    <!-- /row -->
 
+                    <!-- form validation -->
+                    <div class="row mb-4">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        Form Validation
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p>Form validation with jQuery Form Validation.</p>
+
+                                    <form class="g-3 form-validate">
+                                        <div class="row mb-3">
+                                            <div class="col-md-6">
+                                                <label for="name" class="form-label">First name</label>
+                                                <input type="text" class="form-control" name="name" id="name" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="lastname" class="form-label">Last name</label>
+                                                <input type="text" class="form-control" name="lastname" id="lastname" required>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-12">
+                                                <label for="username" class="form-label">Username</label>
+                                                <div class="input-group">
+                                                  <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                                                  <input type="text" class="form-control" name="username" id="username"  aria-describedby="inputGroupPrepend2" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-12">
+                                                <label for="city" class="form-label">City</label>
+                                                <input type="text" class="form-control" name="city" id="city" required>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-12">
+                                                <label for="state" class="form-label">State</label>
+                                                <select class="form-select" name="state" id="state" required>
+                                                  <option selected disabled value="">Choose...</option>
+                                                  <option>...</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <button class="btn btn-primary" type="submit">Submit form</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /form validation -->
+
+                    <!-- checkbox and radio button -->
+                    <div class="row mb-4">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        Checkbox and radio button
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <!-- bootstrap checkbox -->
+                                        <div class="col">
+                                            <p class="mb-3">Bootstrap checkbox, switch and radio buttons.</p>
+
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Default checkbox
+                                                </label>
+                                            </div>
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    Checked checkbox
+                                                </label>
+                                            </div>
+                                            
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                    Default radio
+                                                </label>
+                                            </div>
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                <label class="form-check-label" for="flexRadioDefault2">
+                                                    Default checked radio
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                                <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+                                            </div>
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                                <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+                                            </div>
+                                        </div>
+                                        <!-- /bootstrap checkbox -->
+                                        <!-- pretty checkbox -->
+                                        <div class="col">
+                                            <p class="mb-3">Custom checkbox with <a href="https://lokesh-coder.github.io/pretty-checkbox/" target="_blank">Pretty checkbox</a>.</p>
                                             <div class="pretty p-default">
                                                 <input type="checkbox" />
                                                 <div class="state">
@@ -283,6 +387,8 @@
                                                     <label>Occasionally</label>
                                                 </div>
                                             </div>
+
+                                            <p class="mb-3 mt-3">Custom radio with <a href="https://lokesh-coder.github.io/pretty-checkbox/" target="_blank">Pretty checkbox</a>.</p>
                                             <div class="pretty p-icon p-round p-plain p-smooth">
                                                 <input type="radio" name="plain">
                                                 <div class="state p-primary-o">
@@ -306,254 +412,253 @@
                                                     <label>In relationship</label>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <!-- /pretty checkbox -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /checkbox and radio button -->
 
+                    <!-- date controls -->
+                    <div class="row mb-4">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        Date controls
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="row mb-3">
+                                                <div class="col-md-12">
+                                                    <label for="html-datepicker" class="form-label">Datepicker native</label>
+                                                    <input type="date" class="form-control" name="html-datepicker" id="html-datepicker">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-md-12">
+                                                    <label for="html-timepicker" class="form-label">Timepicker native</label>
+                                                    <input type="time" class="form-control" name="html-timepicker" id="html-timepicker">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-md-12">
+                                                    <label for="datepicker" class="form-label">Datepicker</label>
+                                                    <input type="text" class="form-control datepicker" name="datepicker" id="datepicker">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-md-12">
+                                                    <label for="datetimepicker" class="form-label">Datetimepicker</label>
+                                                    <input type="text" class="form-control datetimepicker" name="datetimepicker" id="datetimepicker">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="row mb-3">
+                                                <div class="col-md-12">
+                                                    <label for="datepicker-ptbr" class="form-label">Datepicker PT-BR</label>
+                                                    <input type="text" class="form-control datepicker-ptbr" name="datepicker-ptbr" id="datepicker-ptbr">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-md-12">
+                                                    <label for="datetimepicker-ptbr" class="form-label">Datetimepicker PT-BR</label>
+                                                    <input type="text" class="form-control datetimepicker-ptbr" name="datetimepicker-ptbr" id="datetimepicker-ptbr">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-md-12">
+                                                    <label for="daterangepicker" class="form-label">Date Range Picker</label>
+                                                    <input type="text" class="form-control daterangepicker" name="daterangepicker" id="daterangepicker">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /date controls -->
 
+                    <!-- editor -->
+                    <div class="row mb-4">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        Wysiwyg editor
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="row mb-3">
+                                                <div class="col-md-12">
+                                                    <label for="textarea" class="form-label">Textarea with <a href="https://www.tiny.cloud/docs/demo/basic-example/" target="_blank">TinyMCE</a></label>
+                                                    <textarea cols="10" rows="10" class="form-control text-editor" name="textarea" id="textarea"></textarea>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="mb-3">
-                                            <label for="disabled" class="form-label">Disabled input</label>
-                                            <input type="text" id="disabled" class="form-control" placeholder="Disabled input" disabled>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="select" class="form-label">Select</label>
-                                            <select class="form-select" id="select" aria-label="Default select example">
-                                                <option selected>Open this select menu</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                            </select>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="select-custom" class="form-label">Select custom combo</label>
-                                            <select class="form-select select-combo" id="select-custom" aria-label="Default select example">
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                            </select>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="select-multiple" class="form-label">Select multiple</label>
-                                            <select class="form-select select-multiple" id="select-multiple" aria-label="Default select example">
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                            </select>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="customRange1" class="form-label">Example range</label>
-                                            <input type="range" class="form-range" id="customRange1">
-                                        </div>
-                                        <div class="mb-3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /editor -->
+
+                    <!-- upload -->
+                    <div class="row mb-4">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        Upload
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="mb-3">Upload with <a href="https://www.dropzone.dev/js/" target="_blank">Dropzone</a></p>
+                                    <div class="row">
+                                        <div class="col">
                                             <label for="upload-single" class="form-label">Upload Single</label>
                                             <div class="dropzone single-upload" id="upload-single">
                                                 <div class="dz-message" data-dz-message><span>Clique aqui para fazer o upload do arquivo...</span></div>
                                             </div>
-                                            
+                                        </div>
+                                        <div class="col">
                                             <label for="upload-multiple" class="form-label">Upload Multiple</label>
                                             <div class="dropzone multiple-upload" id="upload-multiple">
                                                 <div class="dz-message" data-dz-message><span>Clique aqui para fazer o upload dos arquivos...</span></div>
                                             </div>
                                         </div>
-                                        <div class="row mb-3">
-                                            <div class="col-md-12">
-                                                <label for="textarea" class="form-label">Textarea with editor</label>
-                                                <textarea cols="10" rows="10" class="form-control text-editor" name="textarea" id="textarea"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="tag-input" class="form-label">Tag input</label>
-                                            <input type="text" class="form-control tag-input" id="tag-input">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="tag-input2" class="form-label">Tag input 2</label>
-                                            <input type="text" class="form-control tag-input" id="tag-input2">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="tag-input3" class="form-label">Tag input 3</label>
-                                            <input type="text" class="form-control tag-input" id="tag-input3" value="css, html, javascript, css">
-                                        </div>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
-                                    </form>
-
-
+                                    </div>
                                 </div>
                             </div>
-                            <!-- /card -->
                         </div>
-                        <!-- /col -->
+                    </div>
+                    <!-- /upload -->
 
+                    <!-- masks -->
+                    <div class="row mb-4">
                         <div class="col">
-                            <!-- card -->
                             <div class="card">
                                 <div class="card-header">
                                     <div class="card-title">
-                                    Form Validation and Masks
+                                        Masks
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <p>Form validation with jQuery Form Validation.</p>
+                                    <div class="row mb-3">
+                                        <div class="col-md-12">
+                                            <label for="zip" class="form-label">Zip</label>
+                                            <input type="text" class="form-control" name="zip" id="zip" required>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-4">
+                                            <label for="date" class="form-label">Date</label>
+                                            <input type="text" class="form-control date-mask" name="date" id="date">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="date-ptbr" class="form-label">Date PT-BR</label>
+                                            <input type="text" class="form-control date-mask-ptbr" name="date-ptbr" id="date-ptbr">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="time" class="form-label">Time</label>
+                                            <input type="text" class="form-control time-mask" name="time" id="time">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-12">
+                                            <label for="phone" class="form-label">Phone PT-BR</label>
+                                            <input type="text" class="form-control phone-mask-ptbr" name="phone" id="phone" required>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-12">
+                                            <label for="credit-card" class="form-label">Credit Card</label>
+                                            <input type="text" class="form-control credit-card-mask" name="credit-card" id="credit-card">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="cpf" class="form-label">CPF</label>
+                                            <input type="text" class="form-control cpf-mask" name="cpf" id="cpf">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="cnpj" class="form-label">CNPJ</label>
+                                            <input type="text" class="form-control cnpj-mask" name="cnpj" id="cnpj">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-4">
+                                            <label for="money-rs" class="form-label">Money R$</label>
+                                            <input type="text" class="form-control money-mask-real" name="money-rs" id="money-rs">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="money-euro" class="form-label">Money €</label>
+                                            <input type="text" class="form-control money-mask-euro" name="money-euro" id="money-euro">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="money" class="form-label">Money</label>
+                                            <input type="text" class="form-control money-mask" name="money" id="money">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /masks -->
 
-                                    <form class="g-3 form-validate">
-                                        <div class="row mb-3">
-                                            <div class="col-md-6">
-                                                <label for="name" class="form-label">First name</label>
-                                                <input type="text" class="form-control" name="name" id="name" required>
+                    <!-- select and tag input -->
+                    <div class="row mb-4">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        Select and tag input
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="mb-3">
+                                                <label for="select-custom" class="form-label">Select custom combo</label>
+                                                <select class="form-select select-combo" id="select-custom" aria-label="Default select example">
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
                                             </div>
-                                            <div class="col-md-6">
-                                                <label for="lastname" class="form-label">Last name</label>
-                                                <input type="text" class="form-control" name="lastname" id="lastname" required>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-3">
-                                            <div class="col-md-12">
-                                                <label for="username" class="form-label">Username</label>
-                                                <div class="input-group">
-                                                  <span class="input-group-text" id="inputGroupPrepend2">@</span>
-                                                  <input type="text" class="form-control" name="username" id="username"  aria-describedby="inputGroupPrepend2" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-3">
-                                            <div class="col-md-12">
-                                                <label for="city" class="form-label">City</label>
-                                                <input type="text" class="form-control" name="city" id="city" required>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-3">
-                                            <div class="col-md-12">
-                                                <label for="state" class="form-label">State</label>
-                                                <select class="form-select" name="state" id="state" required>
-                                                  <option selected disabled value="">Choose...</option>
-                                                  <option>...</option>
+                                            <div class="mb-3">
+                                                <label for="select-multiple" class="form-label">Select multiple</label>
+                                                <select class="form-select select-multiple" id="select-multiple" aria-label="Default select example">
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="row mb-3">
-                                            <div class="col-md-12">
-                                                <label for="zip" class="form-label">Zip</label>
-                                                <input type="text" class="form-control" name="zip" id="zip" required>
+                                        <div class="col">
+                                            <div class="mb-3">
+                                                <label for="tag-input" class="form-label">Tag input</label>
+                                                <input type="text" class="form-control tag-input" id="tag-input">
                                             </div>
-                                        </div>
-                                        <div class="row mb-3">
-                                            <div class="col-md-4">
-                                                <label for="date" class="form-label">Date</label>
-                                                <input type="text" class="form-control date-mask" name="date" id="date">
+                                            <div class="mb-3">
+                                                <label for="tag-input2" class="form-label">Tag input 2</label>
+                                                <input type="text" class="form-control tag-input" id="tag-input2" value="css, html, javascript, css">
                                             </div>
-                                            <div class="col-md-4">
-                                                <label for="date-ptbr" class="form-label">Date PT-BR</label>
-                                                <input type="text" class="form-control date-mask-ptbr" name="date-ptbr" id="date-ptbr">
-                                            </div>
-                                            <div class="col-md-4">
-                                                <label for="time" class="form-label">Time</label>
-                                                <input type="text" class="form-control time-mask" name="time" id="time">
-                                            </div>
-                                        </div>
-                                        <div class="row mb-3">
-                                            <div class="col-md-12">
-                                                <label for="phone" class="form-label">Phone PT-BR</label>
-                                                <input type="text" class="form-control phone-mask-ptbr" name="phone" id="phone" required>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-3">
-                                            <div class="col-md-12">
-                                                <label for="credit-card" class="form-label">Credit Card</label>
-                                                <input type="text" class="form-control credit-card-mask" name="credit-card" id="credit-card">
-                                            </div>
-                                        </div>
-                                        <div class="row mb-3">
-                                            <div class="col-md-6">
-                                                <label for="cpf" class="form-label">CPF</label>
-                                                <input type="text" class="form-control cpf-mask" name="cpf" id="cpf">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="cnpj" class="form-label">CNPJ</label>
-                                                <input type="text" class="form-control cnpj-mask" name="cnpj" id="cnpj">
-                                            </div>
-                                        </div>
-                                        <div class="row mb-3">
-                                            <div class="col-md-4">
-                                                <label for="money-rs" class="form-label">Money R$</label>
-                                                <input type="text" class="form-control money-mask-real" name="money-rs" id="money-rs">
-                                            </div>
-                                            <div class="col-md-4">
-                                                <label for="money-euro" class="form-label">Money €</label>
-                                                <input type="text" class="form-control money-mask-euro" name="money-euro" id="money-euro">
-                                            </div>
-                                            <div class="col-md-4">
-                                                <label for="money" class="form-label">Money</label>
-                                                <input type="text" class="form-control money-mask" name="money" id="money">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <button class="btn btn-primary" type="submit">Submit form</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <!-- /card -->
-
-                            <!-- card -->
-                            <div class="card mt-2">
-                                <div class="card-header">
-                                    <div class="card-title">
-                                        Date and datetime
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <p>Date and datetime picker</p>
-
-                                    <div class="row mb-3">
-                                        <div class="col-md-12">
-                                            <label for="html-datepicker" class="form-label">Datepicker native</label>
-                                            <input type="date" class="form-control" name="html-datepicker" id="html-datepicker">
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col-md-12">
-                                            <label for="html-timepicker" class="form-label">Timepicker native</label>
-                                            <input type="time" class="form-control" name="html-timepicker" id="html-timepicker">
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col-md-12">
-                                            <label for="datepicker" class="form-label">Datepicker</label>
-                                            <input type="text" class="form-control datepicker" name="datepicker" id="datepicker">
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col-md-12">
-                                            <label for="datetimepicker" class="form-label">Datetimepicker</label>
-                                            <input type="text" class="form-control datetimepicker" name="datetimepicker" id="datetimepicker">
-                                        </div>
-                                    </div>
-
-                                    <div class="row mb-3">
-                                        <div class="col-md-12">
-                                            <label for="datepicker-ptbr" class="form-label">Datepicker PT-BR</label>
-                                            <input type="text" class="form-control datepicker-ptbr" name="datepicker-ptbr" id="datepicker-ptbr">
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col-md-12">
-                                            <label for="datetimepicker-ptbr" class="form-label">Datetimepicker PT-BR</label>
-                                            <input type="text" class="form-control datetimepicker-ptbr" name="datetimepicker-ptbr" id="datetimepicker-ptbr">
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col-md-12">
-                                            <label for="daterangepicker" class="form-label">Date Range Picker</label>
-                                            <input type="text" class="form-control daterangepicker" name="daterangepicker" id="daterangepicker">
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- /card -->
                         </div>
-                        <!-- /col -->
-
                     </div>
-                    <!-- /row -->
+                    <!-- /select and tag input -->
                 </div>
                 <!-- /container -->
             </div>
