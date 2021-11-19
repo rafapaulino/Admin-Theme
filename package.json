@@ -33,6 +33,7 @@
     "jquery-maskmoney": "^3.0.2",
     "jquery-validation": "^1.19.3",
     "litepicker": "^2.0.12",
+    "pretty-checkbox": "^3.0.3",
     "select2": "^4.1.0-rc.0",
     "select2-bootstrap-5-theme": "^1.2.0",
     "sweetalert2": "^11.1.10",
