@@ -12,22 +12,19 @@
                 var $this = $(this);
                 var $title = $this.data('title');
                 var $message = $this.data('message');
-                var $url = $this.attr('href');
-                
-                $.confirm({
+                var $yes = $this.data('yes');
+                var $no = $this.data('no');
+                var $form = $this.find('form');
+
+                Swal.fire({
                     title: $title,
-                    content: $message,
-                    buttons: {
-                        sim: {
-                            text: 'Sim', // With spaces and symbols
-                            action: function () {
-                                window.location.href = $url;
-                            }
-                        },
-                        nao: {
-                            text: 'Não', // With spaces and symbols
-                            action: function () {}
-                        }
+                    text: $message,
+                    showCancelButton: true,
+                    confirmButtonText: $yes,
+                    cancelButtonText: $no,
+                  }).then((result) => {
+                    if (result.isConfirmed) {
+                        $form.submit();
                     }
                 });
                            
