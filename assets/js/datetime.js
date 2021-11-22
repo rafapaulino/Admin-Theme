@@ -36,7 +36,7 @@
                 let daterange = document.getElementsByClassName('daterangepicker');
                 
                 for (let loop = 0; loop < daterange.length; loop++) {
-                    let item = daterange.item(loop)
+                    let item = daterange.item(loop);
                    
                     let litepicker = new Litepicker({
                         element: item,
