@@ -50,6 +50,14 @@ main {
     overflow-x: hidden;
 }
 
-table.table {
+.table-wrapper {
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.table-wrapper > table.datatable {
     max-width: 870px !important;
 }
