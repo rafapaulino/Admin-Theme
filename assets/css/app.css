@@ -58,6 +58,6 @@ main {
     overflow: hidden;
 }
 
-.table-wrapper > table.datatable {
+.table-wrapper > table.dataTable {
     max-width: 870px !important;
 }
