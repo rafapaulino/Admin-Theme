@@ -1,0 +1,19 @@
+.sortable-menu,
+.sortable-menu ol {
+    list-style: none;
+}
+
+.menu-handle {
+    width: 100%;
+    display: inline-block;
+    padding: 10px;
+    background: #eeeded;
+    border: 1px solid #8c8585;
+    font-size: 1em;
+    margin-bottom: 15px;
+    font-family: 'Roboto', Arial, Helvetica, Verdana, sans-serif;
+    cursor: move;
+}
+.menu-handle span {
+    font-weight: bold;
+}

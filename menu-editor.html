@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menu editor</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="node_modules/dropzone/dist/basic.css">
+    <link rel="stylesheet" href="node_modules/dropzone/dist/dropzone.css">
+    <link rel="stylesheet" href="node_modules/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="node_modules/litepicker/dist/css/litepicker.css">
+    <link rel="stylesheet" href="node_modules/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="node_modules/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css">
+    <link rel="stylesheet" href="node_modules/@yaireo/tagify/dist/tagify.css"> 
+    <link rel="stylesheet" href="node_modules/select2/dist/css/select2.min.css"> 
+    <link rel="stylesheet" href="node_modules/select2-bootstrap-5-theme/dist/select2-bootstrap-5-theme.min.css"> 
+    <link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="node_modules/pretty-checkbox/dist/pretty-checkbox.min.css">      
+    <link rel="stylesheet" href="assets/css/app.css?bilau=34">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+    <link rel="stylesheet" href="assets/css/title-breadcrumb.css">
+    <link rel="stylesheet" href="assets/css/card.css">
+    <link rel="stylesheet" href="assets/css/form.css">
+    <link rel="stylesheet" href="assets/css/sortable-menu.css?time=0000">
+<body>
+<!-- app -->
+<div class="app">
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                    
+                <div class="d-flex justify-content-between navbar-options">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" id="sidebarCollapse"><i class="fas fa-bars"></i></a>
+                        </li>
+                    </ul>
+                    <div class="d-flex justify-content-end">
+                        <div class="flex-shrink-0 dropdown">
+                            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                              <img src="https://pages.revox.io/dashboard/latest/html/corporate/assets/img/profiles/avatar.jpg" alt="User Name" class="rounded-circle user-logged-avatar">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end text-small dropdown-user" aria-labelledby="dropdownUser2">
+                                <a href="#" class="dropdown-item"><span>Signed in as <br><strong>David Aunsberg</strong></span></a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item">Your Profile</a>
+                                <a href="#" class="dropdown-item">Settings</a>
+                                <a href="#" class="dropdown-item">Logout</a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </nav>
+    </header>
+    <!-- /header -->
+    <!-- main -->
+    <main>
+        <!-- sidebar -->
+        <nav class="sidebar">
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="#homeSubmenu">
+                        <i class="fas fa-tachometer-alt"></i> Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-bs-toggle="collapse" data-bs-target="#pageSubmenu"  aria-expanded="false">
+                        <i class="fas fa-cog"></i> Itens
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li><a href="#">Page 1</a></li>
+                        <li><a href="#">Page 2</a></li>
+                        <li><a href="#">Page 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu2" data-bs-toggle="collapse" data-bs-target="#pageSubmenu2"  aria-expanded="false">
+                        <i class="fas fa-cog"></i> Itens
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu2">
+                        <li><a href="#">Page 1</a></li>
+                        <li><a href="#">Page 2</a></li>
+                        <li><a href="#">Page 3</a></li>
+                    </ul>
+                </li>
+                <li class="active">
+                    <a href="menu-editor.html">
+                        <i class="fas fa-bars"></i> Menu Editor
+                    </a>
+                </li>
+                <li>
+                    <a href="tables.html">
+                        <i class="fas fa-table"></i> Tables
+                    </a>
+                </li>
+                <li>
+                    <a href="#forms" data-bs-toggle="collapse" data-bs-target="#forms"  aria-expanded="false">
+                        <i class="fab fa-wpforms"></i> Forms
+                    </a>
+                    <ul class="collapse list-unstyled" id="forms">
+                        <li><a href="form-elements.html">Form Elements</a></li>
+                        <li><a href="form-wizard.html">Form Wizard</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pages" data-bs-toggle="collapse" data-bs-target="#pages"  aria-expanded="false">
+                        <i class="fas fa-paste"></i> Pages
+                    </a>
+                    <ul class="collapse list-unstyled" id="pages">
+                        <li><a href="blank-page.html">Blank Page</a></li>
+                        <li><a href="404.html">404 Page</a></li>
+                        <li><a href="500.html">500 Page</a></li>
+                        <li><a href="login.html">Login Page</a></li>
+                        <li><a href="forgot-password.html">Forgot Password Page</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-paper-plane" aria-hidden="true"></i> Bancas</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-pencil-alt"></i> Teses</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /sidebar -->
+        <!-- content -->
+        <div class="content">
+            <!-- title-breadcrumb -->
+            <div class="title-breadcrumb bg-light border-top d-flex flex-row justify-content-start shadow-sm">
+                <h1>Menu Editor</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Menu Editor</li>
+                    </ol>
+                </nav>
+                <i class="fas fa-sync-alt fa-spin fa-lg loading-icon"></i>
+            </div>
+            <!-- /title-breadcrumb -->  
+            
+            <!-- body -->
+            <div class="body">
+                <div class="container">
+
+                    <div class="row mb-4">
+                        <div class="col">
+                            <!-- card -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        Sortable and menu editor
+                                    </div>
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-8 px-2">
+                                            <!-- sortable -->
+                                            <ol class="sortable sortable-menu" id="list">
+                                                <li id="item_1">
+                                                    <div class="menu-handle">
+                                                        <span>Home</span>
+                                                    </div>
+                                                    <ol>
+                                                        <li id="item_2">
+                                                            <div class="menu-handle">
+                                                                <span>About us</span>
+                                                            </div>
+                                                            <ol>
+                                                                <li id="item_3">
+                                                                    <div class="menu-handle">
+                                                                        <span>Our Portfolio</span>
+                                                                    </div>
+                                                                </li>
+                                                            </ol>
+                                                        </li>
+                                                        <li id="item_4">
+                                                            <div class="menu-handle">
+                                                                <span>Our Team</span>
+                                                            </div>
+                                                        </li>
+                                                    </ol>
+                                                </li>
+                                                <li id="item_5">
+                                                   <div class="menu-handle">
+                                                        <span>How it works</span>
+                                                   </div>
+                                                </li>
+                                                <li id="item_6">
+                                                   <div class="menu-handle">
+                                                        <span>Contact us</span>
+                                                   </div>
+                                                </li>
+                                            </ol>
+                                            <!-- /sortable -->
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <!-- /card -->
+                        </div>
+                        <!-- /col -->
+                    </div>
+                    <!-- /row -->
+                    
+                </div>
+                <!-- /container -->
+            </div>
+            <!-- /body -->
+        </div>
+        <!-- /content -->
+    </main>
+    <!-- main -->
+</div>
+<!-- /app -->
+
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="node_modules/jquery-validation/dist/additional-methods.min.js"></script>
+<script src="node_modules/cleave.js/dist/cleave.min.js"></script>
+<script src="node_modules/cleave.js/dist/addons/cleave-phone.br.js"></script>
+<script src="node_modules/jquery-maskmoney/dist/jquery.maskMoney.min.js"></script>
+<script src="node_modules/tinymce/tinymce.min.js"></script>
+<script src="node_modules/dropzone/dist/dropzone-min.js"></script>
+<script src="node_modules/flatpickr/dist/flatpickr.min.js"></script>
+<script src="node_modules/litepicker/dist/js/main.js"></script>
+<script src="node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="node_modules/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
+<script src="node_modules/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script src="node_modules/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js"></script>
+<script src="node_modules/@yaireo/tagify/dist/tagify.js"></script>
+<script src="node_modules/select2/dist/js/select2.full.min.js"></script>
+<script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script src="node_modules/axios/dist/axios.min.js"></script>
+
+<!-- <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script> -->
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/nestedSortable/2.0.0/jquery.mjs.nestedSortable.min.js" integrity="sha512-uAt5HkX8rwCV19v9HIeAocLUfQvQDfX0zuaMQr5HhGZc6GwhJoe9hzJYBxzsWTaDSMl4FazGovJwUbOA8rGuog==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="assets/js/app.js?time=00000"></script>
+<script src="assets/js/sidebar.js"></script>
+<script src="assets/js/form.js"></script>
+<script src="assets/js/datetime.js"></script>
+<script src="assets/js/delete.js"></script>
+<script src="assets/js/cep.js"></script>
+<script src="assets/js/menu-sortable.js"></script>
+</body>
+</html>
