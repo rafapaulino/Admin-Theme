@@ -33,7 +33,6 @@
     "datatables.net-responsive-bs5": "^2.2.9",
     "dropzone": "^6.0.0-beta.1",
     "flatpickr": "^4.6.9",
-    "html5sortable": "^0.13.3",
     "jquery": "^3.6.0",
     "jquery-maskmoney": "^3.0.2",
     "jquery-validation": "^1.19.3",

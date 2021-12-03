@@ -185,6 +185,44 @@
             });
         };
 
+        $public.showYouTubePlayer = function() {
+            let youtubeUrlInputs = document.querySelectorAll('input.youtube-url');
+            Array.from(youtubeUrlInputs).forEach(function(input) {
+                
+                ['blur','keyup','keydown'].forEach(function(event) {
+                    
+                    input.addEventListener(event, function( event ) {
+                        $private.constructYouTubePlayer(event.target);
+                    }, true);
+
+                });
+
+                window.onload = function(e) { 
+                    $private.constructYouTubePlayer(input);
+                };
+
+            });
+        };
+
+        $private.constructYouTubePlayer = function(input) {
+            let url = input.value;
+            let embed = input.getAttribute('data-embed');
+            let iframe = document.getElementById(embed);
+
+            if (url != undefined || url != '') {        
+                let regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=|\?v=)([^#\&\?]*).*/;
+                let match = url.match(regExp);
+                
+                if (match && match[2].length == 11) {
+                    let url = 'https://www.youtube.com/embed/' + match[2] + '?autoplay=1&enablejsapi=1';
+                    let youtube = `<iframe sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-presentation" src="${url}"  width="500" height="265" frameborder="0" allowfullscreen></iframe>`;
+                    iframe.innerHTML = youtube;
+                }
+            } else {
+                iframe.innerHTML = '';
+            }
+        };
+
         return $public;
     })();
 
@@ -201,5 +239,6 @@
     formApp.uploadInit();
     formApp.tagInputInit();
     formApp.selectCombo();
+    formApp.showYouTubePlayer();
 
 })(window, document, jQuery);
