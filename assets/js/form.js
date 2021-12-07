@@ -150,21 +150,43 @@
 
         $public.uploadInit = function() {
 
+            let headers = {
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+            };
+
             if (window.app.elementExists('single-upload')) {
-                let singleUpload = new Dropzone('.single-upload', { 
-                    url: "/file/post",
-                    method: "post",
-                    paramName: "file",
-                    maxFiles: 1
+
+                let singleUploads = document.getElementsByClassName('single-upload');
+
+                Array.from(singleUploads).forEach(function(single) {
+                    
+                    let url = single.getAttribute('data-url');
+                    new Dropzone('.single-upload', { 
+                        url: url,
+                        method: "post",
+                        paramName: "file",
+                        maxFiles: 1,
+                        headers: headers
+                    });
+
                 });
             }
 
             if (window.app.elementExists('multiple-upload')) {
-                let multipleUpload = new Dropzone('.multiple-upload', { 
-                    url: "/file/post",
-                    method: "post",
-                    uploadMultiple: true,
-                    paramName: "file",
+
+                let multipleUploads = document.getElementsByClassName('single-upload');
+
+                Array.from(multipleUploads).forEach(function(multiple) {
+                    
+                    let url = multiple.getAttribute('data-url');
+                    new Dropzone('.multiple-upload', { 
+                        url: url,
+                        method: "post",
+                        paramName: "file",
+                        uploadMultiple: true,
+                        headers: headers
+                    });
+
                 });
             }
         };

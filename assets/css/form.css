@@ -45,3 +45,67 @@ label.error {
 .select2-container--default .select2-selection--multiple {
     border-radius: 0 !important;
 }
+
+
+i.help {
+    display: block;
+}
+
+.multiple-select-checkbox {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.multiple-select-checkbox > a.btn {
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    float: left;
+    border-right: 1px solid #ced4da;
+    margin: 0;
+}
+
+.multiple-select-checkbox > a.btn:hover {
+    background-color: #f5f5f5;
+}
+.multiple-select-checkbox > a.btn.select-all {
+    border-left: 1px solid #ced4da;
+}
+
+.multiple-select-checkbox > div {
+    clear: both;
+    width: 100%;
+    height: 150px;
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border: 1px solid #ced4da;
+}
+
+.multiple-select-checkbox > div ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.multiple-select-checkbox > div ul li {
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.multiple-select-checkbox > div ul li label {
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.multiple-select-checkbox > div ul li:hover {
+    background-color: #f5f5f5;
+}
