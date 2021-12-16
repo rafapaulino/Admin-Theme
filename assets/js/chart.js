@@ -8,16 +8,27 @@
         let $private = {};
 
         $public.pie = function(element, data, options) {
-            console.log(element);
             let pie = document.getElementById(element);
             let chart = {};
-
-            console.log('chegou aqui');
-            console.log(pie);
 
             if (pie !== null) {
                 chart = new Chart(pie, {
                     type: 'pie',
+                    data: data,
+                    options: options
+                });
+            }
+
+            return chart;
+        };
+
+        $public.bar = function(element, data, options) {
+            let bar = document.getElementById(element);
+            let chart = {};
+
+            if (bar !== null) {
+                chart = new Chart(bar, {
+                    type: 'bar',
                     data: data,
                     options: options
                 });
