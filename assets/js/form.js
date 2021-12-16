@@ -142,7 +142,7 @@
                 theme: 'silver',
                 height: 500,
                 mobile: { theme: 'mobile' },
-                plugins: 'print preview fullpage searchreplace autolink directionality visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor insertdatetime advlist lists textcolor wordcount imagetools contextmenu colorpicker textpattern help',
+                plugins: 'print preview searchreplace autolink directionality visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor insertdatetime advlist lists textcolor wordcount imagetools contextmenu colorpicker textpattern help',
                 toolbar1: 'formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat',
                 image_advtab: true,                
             });
@@ -150,25 +150,41 @@
 
         $public.uploadInit = function() {
 
-            let headers = {
-                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
-            };
+            let headers = {};
+            let csrf = document.querySelector('meta[name="csrf-token"]');
+            
+            if (csrf !== null) {
+                headers = {
+                    'X-CSRF-TOKEN': csrf.content
+                };
+            }
+
 
             if (window.app.elementExists('single-upload')) {
 
                 let singleUploads = document.getElementsByClassName('single-upload');
+                let fields = [];
+                let loop = 0;
 
                 Array.from(singleUploads).forEach(function(single) {
                     
                     let url = single.getAttribute('data-url');
-                    new Dropzone('.single-upload', { 
+                    let id = single.getAttribute('id');
+                    let target = single.getAttribute('data-target');
+
+                    fields[loop] = new Dropzone('#' + id, { 
                         url: url,
                         method: "post",
                         paramName: "file",
                         maxFiles: 1,
                         headers: headers
                     });
+                    fields[loop].on("success",function(file, response) {
+                        document.getElementById(target).value = response.success;
+                    });
 
+
+                    loop++;
                 });
             }
 

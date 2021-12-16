@@ -10,11 +10,13 @@
             let button = document.getElementById("sidebarCollapse");
             let sidebar = document.getElementsByClassName("sidebar");
 
-            button.onclick = function(e) {
-                e.preventDefault();
-                sidebar[0].classList.toggle("active");
-                button.classList.toggle("active");
-            };
+            if (button !== null && sidebar !== null) {
+                button.onclick = function(e) {
+                    e.preventDefault();
+                    sidebar[0].classList.toggle("active");
+                    button.classList.toggle("active");
+                };
+            }
         };
 
         return $public;

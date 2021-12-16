@@ -62,3 +62,14 @@ main {
 .table-wrapper > table.dataTable {
     max-width: 865px !important;
 }
+
+/* chart */
+.chart-container {
+    position: relative;
+    margin: auto;
+    max-height: 500px;
+    width: 100%;
+    background: transparent;
+    padding: 5px;
+    box-sizing: border-box;
+}
