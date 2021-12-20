@@ -19,6 +19,10 @@
             return $private.create('line', element, data, options);
         };
 
+        $public.radar = function(element, data, options) {
+            return $private.create('radar', element, data, options);
+        };
+
         $private.create = function(type, element, data, options) {
             let canvas = document.getElementById(element);
             let chart = {};
