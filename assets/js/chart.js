@@ -23,6 +23,10 @@
             return $private.create('radar', element, data, options);
         };
 
+        $public.polar = function(element, data, options) {
+            return $private.create('polarArea', element, data, options);
+        };
+
         $private.create = function(type, element, data, options) {
             let canvas = document.getElementById(element);
             let chart = {};
