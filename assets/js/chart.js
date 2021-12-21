@@ -27,6 +27,10 @@
             return $private.create('polarArea', element, data, options);
         };
 
+        $public.doughnut = function(element, data, options) {
+            return $private.create('doughnut', element, data, options);
+        };
+
         $private.create = function(type, element, data, options) {
             let canvas = document.getElementById(element);
             let chart = {};
