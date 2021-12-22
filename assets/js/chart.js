@@ -31,6 +31,11 @@
             return $private.create('doughnut', element, data, options);
         };
 
+        $public.horizontalBar = function(element, data, options) {
+            options.indexAxis= 'y';
+            return $private.create('bar', element, data, options);
+        };
+
         $private.create = function(type, element, data, options) {
             let canvas = document.getElementById(element);
             let chart = {};
