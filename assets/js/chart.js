@@ -36,6 +36,10 @@
             return $private.create('bar', element, data, options);
         };
 
+        $public.mixed = function(element, data, options) {
+            return $private.create('bar', element, data, options);
+        };
+
         $private.create = function(type, element, data, options) {
             let canvas = document.getElementById(element);
             let chart = {};
