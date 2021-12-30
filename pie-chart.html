@@ -64,14 +64,21 @@
                         <i class="fas fa-tachometer-alt"></i> Dashboard
                     </a>
                 </li>
-                <li>
-                    <a href="#pageSubmenu" data-bs-toggle="collapse" data-bs-target="#pageSubmenu"  aria-expanded="false">
-                        <i class="fas fa-cog"></i> Itens
+                <li class="active">
+                    <a href="#pageSubmenu" data-bs-toggle="collapse" data-bs-target="#pageSubmenu"  aria-expanded="true">
+                        <i class="fas fa-chart-pie"></i> Charts
                     </a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li><a href="#">Page 1</a></li>
-                        <li><a href="#">Page 2</a></li>
-                        <li><a href="#">Page 3</a></li>
+                    <ul class="collapse show list-unstyled" id="pageSubmenu">
+                        <li><a href="bar-chart.html">Bar Chart</a></li>
+                        <li><a href="bubble-chart.html">Bubble Chart</a></li>
+                        <li><a href="doughnut-chart.html">Doughnut Chart</a></li>
+                        <li><a href="grouped-bar-chart.html">Grouped Bar Chart</a></li>
+                        <li><a href="horizontal-bar-chart.html">Horizontal Bar Chart</a></li>
+                        <li><a href="line-chart.html">Line Chart</a></li>
+                        <li><a href="mixed-chart.html">Mixed Chart</a></li>
+                        <li><a href="pie-chart.html">Pie Chart</a></li>
+                        <li><a href="polar-chart.html">Polar Chart</a></li>
+                        <li><a href="radar-chart.html">Radar Chart</a></li>
                     </ul>
                 </li>
                 <li>
@@ -85,6 +92,11 @@
                     </ul>
                 </li>
                 <li>
+                    <a href="tables.html">
+                        <i class="fas fa-table"></i> Tables
+                    </a>
+                </li>
+                <li>
                     <a href="#forms" data-bs-toggle="collapse" data-bs-target="#forms"  aria-expanded="false">
                         <i class="fab fa-wpforms"></i> Forms
                     </a>
@@ -93,11 +105,11 @@
                         <li><a href="form-wizard.html">Form Wizard</a></li>
                     </ul>
                 </li>
-                <li class="active">
-                    <a href="#pages" data-bs-toggle="collapse" data-bs-target="#pages"  aria-expanded="true">
+                <li>
+                    <a href="#pages" data-bs-toggle="collapse" data-bs-target="#pages"  aria-expanded="false">
                         <i class="fas fa-paste"></i> Pages
                     </a>
-                    <ul class="collapse show list-unstyled" id="pages">
+                    <ul class="collapse list-unstyled" id="pages">
                         <li><a href="blank-page.html">Blank Page</a></li>
                         <li><a href="404.html">404 Page</a></li>
                         <li><a href="500.html">500 Page</a></li>
@@ -114,6 +126,7 @@
             </ul>
         </nav>
         <!-- /sidebar -->
+
         <!-- content -->
         <div class="content">
             <!-- title-breadcrumb -->
