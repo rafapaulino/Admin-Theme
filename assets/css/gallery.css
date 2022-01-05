@@ -1,0 +1,21 @@
+/* ---------------------------------------------------
+    GALLERY
+----------------------------------------------------- */
+.gallery-container {
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    overflow: hidden;
+}
+
+.gallery-container a {
+    flex-basis: 100%;
+    text-align: center;
+    max-width: 170px;
+    margin: 5px;
+}
+.gallery-container a img {
+    display: block;
+    width: 100%;
+}

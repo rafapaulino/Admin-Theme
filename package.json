@@ -42,6 +42,7 @@
     "pretty-checkbox": "^3.0.3",
     "select2": "^4.1.0-rc.0",
     "select2-bootstrap-5-theme": "^1.2.0",
+    "simplelightbox": "^2.10.1",
     "sweetalert2": "^11.2.0",
     "tinymce": "^5.10.2"
   }
