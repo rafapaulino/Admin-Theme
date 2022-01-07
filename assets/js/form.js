@@ -49,9 +49,18 @@
         $public.phoneMask = function() {
             
             if (window.app.elementExists('phone-mask-ptbr')) {
-                let phone_ptbr = new Cleave('.phone-mask-ptbr', {
-                    phone: true,
-                    phoneRegionCode: 'BR'
+                let tels = document.getElementsByClassName('phone-mask-ptbr');
+
+  
+                Array.from(tels).forEach(function(tel) {
+                   tel.addEventListener('keyup', function(e) {
+                       let text = e.target.value;
+                       text = text.replace(/\D/g,"").replace(/^(\d{2})(\d)/g,"($1) $2").replace(/(\d)(\d{4})$/,"$1-$2");
+                       if (text.length > 14) {
+                           text = text.substring(0, 15);
+                       }
+                       e.target.value = text;
+                   });
                 });
             }
         };
