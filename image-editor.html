@@ -242,15 +242,14 @@
     var imageEditor = new tui.ImageEditor('#tui-image-editor-container', {
         includeUI: {
             loadImage: {
-                path: 'https://fellipe.com/demos/lena-js/assets/img/lena.jpg',
+                path: 'assets/lena.jpg',
                 name: 'SampleImage'
             },
            //  theme: blackTheme, // or whiteTheme
             initMenu: 'filter',
             menuBarPosition: 'bottom'
         },
-        cssMaxWidth: 700,
-        cssMaxHeight: 500,
+        cssMaxHeight: 900,
         usageStatistics: false
     });
     window.onresize = function() {
