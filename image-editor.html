@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Image Editor</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="node_modules/tui-image-editor/dist/tui-image-editor.min.css">
+    <link rel="stylesheet" href="node_modules/tui-color-picker/dist/tui-color-picker.min.css">
+
+    <link type="text/css" href="https://uicdn.toast.com/tui-color-picker/v2.2.6/tui-color-picker.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://uicdn.toast.com/tui-image-editor/latest/tui-image-editor.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/app.css?time=78677">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+    <link rel="stylesheet" href="assets/css/title-breadcrumb.css">
+    <link rel="stylesheet" href="assets/css/card.css">
+    <link rel="stylesheet" href="assets/css/form.css">
+    <link rel="stylesheet" href="assets/css/image-editor.css">
+</head>
+<body>
+<!-- app -->
+<div class="app">
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                    
+                <div class="d-flex justify-content-between navbar-options">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" id="sidebarCollapse"><i class="fas fa-bars"></i></a>
+                        </li>
+                    </ul>
+                    <div class="d-flex justify-content-end">
+                        <div class="flex-shrink-0 dropdown">
+                            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                              <img src="https://pages.revox.io/dashboard/latest/html/corporate/assets/img/profiles/avatar.jpg" alt="User Name" class="rounded-circle user-logged-avatar">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end text-small dropdown-user" aria-labelledby="dropdownUser2">
+                                <a href="#" class="dropdown-item"><span>Signed in as <br><strong>David Aunsberg</strong></span></a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item">Your Profile</a>
+                                <a href="#" class="dropdown-item">Settings</a>
+                                <a href="#" class="dropdown-item">Logout</a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </nav>
+    </header>
+    <!-- /header -->
+    <!-- main -->
+    <main>
+        <!-- sidebar -->
+        <nav class="sidebar">
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="#homeSubmenu">
+                        <i class="fas fa-tachometer-alt"></i> Dashboard
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#pageSubmenu" data-bs-toggle="collapse" data-bs-target="#pageSubmenu"  aria-expanded="true">
+                        <i class="fas fa-chart-pie"></i> Charts
+                    </a>
+                    <ul class="collapse show list-unstyled" id="pageSubmenu">
+                        <li><a href="bar-chart.html">Bar Chart</a></li>
+                        <li><a href="bubble-chart.html">Bubble Chart</a></li>
+                        <li><a href="doughnut-chart.html">Doughnut Chart</a></li>
+                        <li><a href="grouped-bar-chart.html">Grouped Bar Chart</a></li>
+                        <li><a href="horizontal-bar-chart.html">Horizontal Bar Chart</a></li>
+                        <li><a href="line-chart.html">Line Chart</a></li>
+                        <li><a href="mixed-chart.html">Mixed Chart</a></li>
+                        <li><a href="pie-chart.html">Pie Chart</a></li>
+                        <li><a href="polar-chart.html">Polar Chart</a></li>
+                        <li><a href="radar-chart.html">Radar Chart</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu2" data-bs-toggle="collapse" data-bs-target="#pageSubmenu2"  aria-expanded="false">
+                        <i class="fas fa-cog"></i> Itens
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu2">
+                        <li><a href="#">Page 1</a></li>
+                        <li><a href="#">Page 2</a></li>
+                        <li><a href="#">Page 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="tables.html">
+                        <i class="fas fa-table"></i> Tables
+                    </a>
+                </li>
+                <li>
+                    <a href="#forms" data-bs-toggle="collapse" data-bs-target="#forms"  aria-expanded="false">
+                        <i class="fab fa-wpforms"></i> Forms
+                    </a>
+                    <ul class="collapse list-unstyled" id="forms">
+                        <li><a href="form-elements.html">Form Elements</a></li>
+                        <li><a href="form-wizard.html">Form Wizard</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pages" data-bs-toggle="collapse" data-bs-target="#pages"  aria-expanded="false">
+                        <i class="fas fa-paste"></i> Pages
+                    </a>
+                    <ul class="collapse list-unstyled" id="pages">
+                        <li><a href="blank-page.html">Blank Page</a></li>
+                        <li><a href="404.html">404 Page</a></li>
+                        <li><a href="500.html">500 Page</a></li>
+                        <li><a href="login.html">Login Page</a></li>
+                        <li><a href="forgot-password.html">Forgot Password Page</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-paper-plane" aria-hidden="true"></i> Bancas</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-pencil-alt"></i> Teses</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /sidebar -->
+ 
+        <!-- content -->
+        <div class="content">
+            <!-- title-breadcrumb -->
+            <div class="title-breadcrumb bg-light border-top d-flex flex-row justify-content-start shadow-sm">
+                <h1>Image Editor</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Image Editor</li>
+                    </ol>
+                </nav>
+                <i class="fas fa-sync-alt fa-spin fa-lg loading-icon"></i>
+            </div>
+            <!-- /title-breadcrumb -->  
+            
+            <!-- body -->
+            <div class="body">
+                <div class="container">
+
+                    <div class="row mb-4">
+                        <div class="col">
+                            <!-- card -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        Image Editor
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row my-2">
+                                        <div class="col-sm-12 col-md-12">
+                                            <div class="content-image-editor">
+                                                <div id="tui-image-editor-container" class="image-editor"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /card -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /body -->
+        </div>
+        <!-- /content -->
+    </main>
+    <!-- main -->
+</div>
+<!-- /app -->
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="node_modules/jquery-validation/dist/additional-methods.min.js"></script>
+<script src="node_modules/cleave.js/dist/cleave.min.js"></script>
+<script src="node_modules/cleave.js/dist/addons/cleave-phone.br.js"></script>
+<script src="node_modules/jquery-maskmoney/dist/jquery.maskMoney.min.js"></script>
+<script src="node_modules/tinymce/tinymce.min.js"></script>
+<script src="node_modules/dropzone/dist/dropzone-min.js"></script>
+<script src="node_modules/flatpickr/dist/flatpickr.min.js"></script>
+<script src="node_modules/litepicker/dist/js/main.js"></script>
+<script src="node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="node_modules/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
+<script src="node_modules/@yaireo/tagify/dist/tagify.js"></script>
+<script src="node_modules/select2/dist/js/select2.full.min.js"></script>
+<script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script src="node_modules/axios/dist/axios.min.js"></script>
+<script src="node_modules/chart.js/dist/chart.min.js"></script>
+<!--
+<script src="node_modules/fabric/dist/fabric.min.js"></script>
+<script src="node_modules/tui-code-snippet/dist/tui-code-snippet.min.js"></script>
+<script src="node_modules/tui-color-picker/dist/tui-color-picker.min.js"></script>
+<script src="node_modules/tui-image-editor/dist/tui-image-editor.min.js"></script>
+-->
+
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/sidebar.js"></script>
+<script src="assets/js/form.js"></script>
+<script src="assets/js/datetime.js"></script>
+<script src="assets/js/delete.js"></script>
+<script src="assets/js/cep.js"></script>
+<script src="assets/js/chart.js?src=3"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.6.0/fabric.js"></script>
+        <script type="text/javascript" src="https://uicdn.toast.com/tui.code-snippet/v1.5.0/tui-code-snippet.min.js"></script>
+        <script type="text/javascript" src="https://uicdn.toast.com/tui-color-picker/v2.2.6/tui-color-picker.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.3/FileSaver.min.js"></script>
+        <script src="https://uicdn.toast.com/tui-image-editor/latest/tui-image-editor.js"></script>
+        <!-- <script type="text/javascript" src="./js/theme/white-theme.js"></script>
+        <script type="text/javascript" src="./js/theme/black-theme.js"></script> -->
+<script>
+/*window.onload = function(e) { 
+
+    var imageEditor = new tui.ImageEditor('#my-image-editor',{});
+
+// Load image
+//imageEditor.loadImageFromURL('img/sampleImage.jpg', 'My sample image');
+
+
+// Load image
+//imageEditor.loadImageFromURL('https://fellipe.com/demos/lena-js/assets/img/lena.jpg', 'My sample image');
+};*/
+</script>
+<script>
+    // Image editor
+    var imageEditor = new tui.ImageEditor('#tui-image-editor-container', {
+        includeUI: {
+            loadImage: {
+                path: 'https://fellipe.com/demos/lena-js/assets/img/lena.jpg',
+                name: 'SampleImage'
+            },
+           //  theme: blackTheme, // or whiteTheme
+            initMenu: 'filter',
+            menuBarPosition: 'bottom'
+        },
+        cssMaxWidth: 700,
+        cssMaxHeight: 500,
+        usageStatistics: false
+    });
+    window.onresize = function() {
+        imageEditor.ui.resizeEditor();
+    }
+   </script>
+</body>
+</html>
