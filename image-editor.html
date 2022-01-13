@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="assets/css/title-breadcrumb.css">
     <link rel="stylesheet" href="assets/css/card.css">
     <link rel="stylesheet" href="assets/css/form.css">
-    <link rel="stylesheet" href="assets/css/image-editor.css">
+    <link rel="stylesheet" href="assets/css/image-editor.css?time=988098">
 </head>
 <body>
 <!-- app -->
@@ -243,11 +243,9 @@
         includeUI: {
             loadImage: {
                 path: 'assets/lena.jpg',
-                name: 'SampleImage'
+                name: 'Imagem'
             },
-           //  theme: blackTheme, // or whiteTheme
-            initMenu: 'filter',
-            menuBarPosition: 'bottom'
+            menuBarPosition: 'left'
         },
         cssMaxHeight: 900,
         usageStatistics: false
@@ -255,6 +253,11 @@
     window.onresize = function() {
         imageEditor.ui.resizeEditor();
     }
+
+    /* 
+        https://stackoverflow.com/questions/55718473/writing-tui-image-editor-canvass-to-server
+
+    */
    </script>
 </body>
 </html>
