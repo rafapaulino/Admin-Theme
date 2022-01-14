@@ -34,6 +34,7 @@
     "datatables.net-responsive": "^2.2.9",
     "datatables.net-responsive-bs5": "^2.2.9",
     "dropzone": "^6.0.0-beta.1",
+    "file-saver": "^2.0.5",
     "flatpickr": "^4.6.9",
     "jquery": "^3.6.0",
     "jquery-maskmoney": "^3.0.2",
