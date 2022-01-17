@@ -53,8 +53,27 @@
                 let dataUri = editor.toDataURL();
                 let blob = $private.dataURItoBlob(dataUri);
                 let file = $private.createFileWithBlob(blob, path, blob.type);
-                console.log(file);
+                let url = e.target.getAttribute('href');
+
+                $private.upload(url, file);
             });
+        };
+
+        $private.upload = function(url, file) {
+            const formData = new FormData();
+            formData.append("file", file);
+
+            let headers = {};
+            let csrf = document.querySelector('meta[name="csrf-token"]');
+            
+            if (csrf !== null) {
+                headers = {
+                    'X-CSRF-TOKEN': csrf.content
+                };
+            }
+
+            axios.post(url, formData, { headers })
+                .then(response => Swal.fire({title: 'Sucesso!',text: 'Arquivo enviado!'}));
         };
 
         $private.dataURItoBlob = function(dataURI) {
