@@ -170,6 +170,13 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="row my-4">
+                                        <div class="col-sm-12 col-md-12">
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editorModal">
+                                                Abrir o editor de imagem na modal
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <!-- /card -->
@@ -184,6 +191,29 @@
     <!-- main -->
 </div>
 <!-- /app -->
+
+
+ 
+<!-- Modal -->
+<div class="modal fade" id="editorModal" tabindex="-1" aria-labelledby="editorModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editorModalLabel">Editor</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="content-image-editor">
+                    <div id="tui-image-editor-modal-container" class="image-editor" data-path="assets/lena.jpg" data-button-save="tui-image-editor-modal-salvar"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-success" href="#" id="tui-image-editor-modal-salvar">Salvar alterações</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
