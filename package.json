@@ -41,6 +41,7 @@
     "jquery-validation": "^1.19.3",
     "litepicker": "^2.0.12",
     "pdfmake": "^0.2.4",
+    "plyr": "^3.6.12",
     "pretty-checkbox": "^3.0.3",
     "select2": "^4.1.0-rc.0",
     "select2-bootstrap-5-theme": "^1.2.0",
