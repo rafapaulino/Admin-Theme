@@ -270,6 +270,12 @@
             }
         };
 
+        $public.colorPickerInit = function() {
+            $('.colorpicker').spectrum({
+                type: "component"
+            });
+        };
+
         return $public;
     })();
 
@@ -287,5 +293,6 @@
     formApp.tagInputInit();
     formApp.selectCombo();
     formApp.showYouTubePlayer();
+    formApp.colorPickerInit();
 
 })(window, document, jQuery);
