@@ -7,16 +7,16 @@
         let $public = {};
 
         $public.init = function() {
-            new Glider(document.querySelector('.carousel-glider'), {
-                slidesToScroll: 1,
-                slidesToShow: 5.5,
-                draggable: true,
-                dots: '.dots',
-                arrows: {
-                    prev: '.glider-prev',
-                    next: '.glider-next'
+            document.addEventListener( 'DOMContentLoaded', function() {
+                var elms = document.getElementsByClassName( 'splide' );
+
+                for ( var i = 0; i < elms.length; i++ ) {
+                    new Splide( elms[ i ], {
+                        type   : 'loop',
+                        perMove: 1,
+                    } ).mount();
                 }
-            });
+            } );
         };
 
         return $public;

@@ -73,3 +73,11 @@ main {
     padding: 5px;
     box-sizing: border-box;
 }
+
+.carousel-js {
+    width: inherit;
+    max-width: 100% !important;
+    overflow: hidden;
+    min-height: 200px;
+    box-sizing: border-box;
+}

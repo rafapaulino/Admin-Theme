@@ -22,6 +22,7 @@
   "homepage": "https://github.com/rafapaulino/Admin-Theme#readme",
   "dependencies": {
     "@popperjs/core": "^2.10.2",
+    "@splidejs/splide": "^4.0.0",
     "@toast-ui/editor": "^3.1.2",
     "@yaireo/tagify": "^4.9.1",
     "axios": "^0.24.0",
@@ -36,7 +37,6 @@
     "dropzone": "^6.0.0-beta.1",
     "file-saver": "^2.0.5",
     "flatpickr": "^4.6.9",
-    "glider-js": "^1.7.7",
     "jquery": "^3.6.0",
     "jquery-maskmoney": "^3.0.2",
     "jquery-validation": "^1.19.3",
