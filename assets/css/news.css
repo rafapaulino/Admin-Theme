@@ -1,0 +1,10 @@
+.card.news .card-body .card-title a {
+    text-decoration: none;
+    color: #000;
+}
+
+.card.news .card-body .card-text {
+    text-decoration: none;
+    font-size: 1.2em;
+    cursor: pointer;
+}
