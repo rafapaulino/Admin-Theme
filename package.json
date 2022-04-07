@@ -50,6 +50,7 @@
     "spectrum-colorpicker2": "^2.0.8",
     "sweetalert2": "^11.2.0",
     "tinymce": "^5.10.2",
+    "toastify-js": "^1.11.2",
     "tui-image-editor": "^3.15.2"
   }
 }
