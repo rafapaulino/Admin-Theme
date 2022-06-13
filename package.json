@@ -23,6 +23,7 @@
   "dependencies": {
     "@popperjs/core": "^2.10.2",
     "@splidejs/splide": "^4.0.0",
+    "@toast-ui/calendar": "^2.0.0-alpha.1",
     "@toast-ui/editor": "^3.1.2",
     "@yaireo/tagify": "^4.9.1",
     "axios": "^0.24.0",
